@@ -41,7 +41,22 @@ public class JavaApplication1 {
     }
 
     //3.2
-    
+    public static double Fibo(int n){
+        if (n == 0 || n == 1){
+            return 1;
+        }
+        return Fibo(n-1) + Fibo(n-2);
+    }
+
+    public static double VezesParFibo(int n){
+        if(n == 0){
+            return 1;
+        }else if(Fibo(n)%2 == 0){
+            return Fibo(n) * VezesParFibo(n-1);
+        }else{
+            return VezesParFibo(n-1);
+        }
+    }
     
     
     
