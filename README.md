@@ -68,6 +68,16 @@ public class JavaApplication1 {
         return base * calcPot(base, expoente - 1);
     }
 
+    // 5
+    public static double Pascal(int n, int m){
+        if(m == 0 || n-m <= 0){
+            return 1;
+        }else{
+            System.out.println(""+ n + "-"+ m);
+            return Pascal(n-1,m-1) + Pascal(n-1,m) ;
+        }
+    }
+    
     // 6
     public static double somaVect(int[] vect, int tamanho) {
         if (tamanho <= 0) {
